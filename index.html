@@ -11,7 +11,7 @@
       justify-content: center;
       align-items: center;
       background: linear-gradient(135deg, #ff758c, #ff7eb3);
-      font-family: 'Arial', sans-serif;
+      font-family: Arial, sans-serif;
     }
 
     .card {
@@ -51,6 +51,12 @@
       color: #333;
       position: absolute;
     }
+
+    .happy-img {
+      width: 220px;
+      margin-top: 20px;
+      border-radius: 12px;
+    }
   </style>
 </head>
 <body>
@@ -66,10 +72,8 @@
   <script>
     function moveNo() {
       const noBtn = document.getElementById("noBtn");
-
       const x = Math.random() * 200 - 100;
       const y = Math.random() * 80 - 40;
-
       noBtn.style.transform = `translate(${x}px, ${y}px)`;
     }
 
@@ -91,9 +95,15 @@
             box-shadow:0 10px 25px rgba(0,0,0,0.2);
           ">
             <h1 style="color:#ff4d6d;">
-              Thank you 💖<br>
+              Thank you, Urvi 💖<br>
               You made the right decision 😌
             </h1>
+
+            <img 
+              src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e"
+              alt="Happy couple"
+              class="happy-img"
+            />
           </div>
         </div>
       `;
