@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Be My Valentine</title>
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      font-family: 'Arial', sans-serif;
+    }
+
+    .card {
+      background: white;
+      padding: 40px 60px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      color: #ff4d6d;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      position: relative;
+      height: 60px;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+
+    #yesBtn {
+      background-color: #ff4d6d;
+      color: white;
+      margin-right: 20px;
+    }
+
+    #noBtn {
+      background-color: #ccc;
+      color: #333;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Will you be my Valentine? ❤️</h1>
+    <div class="buttons">
+      <button id="yesBtn" onclick="yesClicked()">Yes</button>
+      <button id="noBtn" onmouseover="moveNo()">No</button>
+    </div>
+  </div>
+
+  <script>
+    function moveNo() {
+      const noBtn = document.getElementById("noBtn");
+
+      const x = Math.random() * 200 - 100;
+      const y = Math.random() * 80 - 40;
+
+      noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    }
+
+    function yesClicked() {
+      document.body.innerHTML = `
+        <div style="
+          height:100vh;
+          display:flex;
+          justify-content:center;
+          align-items:center;
+          background: linear-gradient(135deg, #ff758c, #ff7eb3);
+          font-family: Arial, sans-serif;
+        ">
+          <div style="
+            background:white;
+            padding:50px 70px;
+            border-radius:16px;
+            text-align:center;
+            box-shadow:0 10px 25px rgba(0,0,0,0.2);
+          ">
+            <h1 style="color:#ff4d6d;">
+              Thank you 💖<br>
+              You made the right decision 😌
+            </h1>
+          </div>
+        </div>
+      `;
+    }
+  </script>
+
+</body>
+</html>
